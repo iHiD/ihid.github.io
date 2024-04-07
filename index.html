@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang='en' prefix='og: http://ogp.me/ns#'>
   <head>
-    <link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Nunito:100,200,300,400,500,600,700,800,900&amp;display=swap" />
-    <title>Jeremy Walker - iHiD</title>
-    <meta content='' name='description'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Jeremy Walker (iHiD)</title>
+    <meta content='The personal homepage of Jeremy Walker (iHiD) - entrepreneur and software developer' name='description'>
 
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1, viewport-fit=cover' name='viewport'>
@@ -11,37 +14,38 @@
     <!-- Twitter Card data -->
     <meta content='summary_large_image' name='twitter:card'>
     <meta content='@iHiD' name='twitter:site'>
-    <meta content='Jeremy Walker' name='twitter:title'>
-    <meta content='' name='twitter:description'>
+    <meta content='Jeremy Walker (iHiD)' name='twitter:title'>
+    <meta content='The personal homepage of Jeremy Walker (iHiD) - entrepreneur and software developer' name='twitter:description'>
     <meta content='@iHiD' name='twitter:creator'>
     <meta content='' name='twitter:image'>
+
     <!-- Open Graph data -->
-    <meta content='Jeremy Walker' property='og:title'>
+    <meta content='Jeremy Walker (iHiD)' property='og:title'>
     <meta content='website' property='og:type'>
-    <meta content='https://ihid.co.uk' property='og:url'>
+    <meta content='https://ihid.info' property='og:url'>
     <meta content='' name='image' property='og:image'>
-    <meta content='' property='og:description'>
+    <meta content='The personal homepage of Jeremy Walker (iHiD) - entrepreneur and software developer' property='og:description'>
+
     <!-- Favicon -->
     <link href='' rel='icon' sizes='32x32' type='image/png'>
     <link href='' rel='icon' sizes='16x16' type='image/png'>
-    <meta content='Jeremy Walker' name='application-name'>
+    <meta content='Jeremy Walker (iHiD)' name='application-name'>
 
     <style>
       * {
         box-sizing: border-box;
       }
 
-      /* line 6, /Users/iHiD/Projects/code/kaido/shopfront/app/assets/stylesheets/defaults.scss */
       html {
-        font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", 'Helvetica Neue', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-weight: 400;
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", 'Helvetica Neue', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         scroll-behavior: smooth;
       }
       body {
-        max-width:800px;
+        margin:0;
         z-index: 0;
-        margin: 0;
-        font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", 'Helvetica Neue', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", 'Helvetica Neue', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-optical-sizing: auto;
+        font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 19px;
@@ -49,66 +53,205 @@
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-        padding:3% 5%;
+      }
+      .container {
+        padding:0 5%;
+        max-width:800px;
+        margin: 0 auto;
+      }
+      header {
+        background-image: linear-gradient(to right, #4231AF, #6150CE);
+        padding:40px 0;
       }
       h1 {
-        margin:0 0 5px 0;
+        margin:0 0 10px 0;
         font-size:40px;
         line-height:40px;
         font-weight:800;
+        color: white;
       }
       .bio {
-        margin-bottom:20px;
-        font-size:20px;
-        line-height:20px;
-        border-bottom:1px solid #eee;
-        padding-bottom:20px;
+        font-size:23px;
+        line-height:130%;
+        color: white;
+      }
+
+      main {
+        padding:50px 0;
       }
       h2 {
-        margin-top:40px;
+        margin-top:0;
         margin-bottom:5px;
         font-size:28px;
         line-height:28px;
         font-weight:600;
       }
+      hr {
+        border-top:1px solid #eaeaea;
+        border-bottom:0;
+        margin:40px 0;
+      }
+      hr+* {
+        margin-top:0;
+      }
+      h2:not(:first-child) {
+        margin-top:40px;
+      }
       h3 {
-        margin-bottom:5px;
-        font-size:24px;
-        line-height:24px;
-        font-weight:800;
+        margin-bottom:0px;
+        font-size:23px;
+        line-height:23px;
+        font-weight:500;
+      }
+      h2+p {
+        margin-top:15px;
+      }
+      h3+p {
+        margin-top:10px;
       }
       p, li {
         font-size:18px;
-        line-height:26px;
+        line-height:150%;
       }
-      a {
-        color:#222;
+      strong {
         font-weight:600;
       }
+      a {
+        color: #604fcd;
+        font-weight:500;
+        text-decoration:none;
+      }
+      a.external:after {
+        content: "⎋";
+        display: inline-block;
+        font-size:10px;
+        transform: scaleX(-1) translateY(-4px);
+        margin-left:2px;
+      }
+      .video-grid {
+        display:grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap:5px;
+      }
+      .video-grid .embed-container {
+        position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; 
+      }
+      .video-grid .embed-container iframe, .video-grid .embed-container object, .video-grid .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+      .photo-grid a {
+        display:block;
+        width:32.3%;
+        margin-right:1%;
+        margin-bottom: 1%;
+      }
+      .photo-grid a:nth-child(3n) { margin-right:0;}
+      .photo-grid a img {
+        display:block;
+        width:100%;
+      }
     </style>
+
   </head>
 
   <body>
-    <h1>Jeremy Walker</h1>
-    <div class="bio">Entrepreneur and software developer</div>
-    <h2>A short biography</h2>
-    <p>I spend my time building organisations and businesses that help others. My current focusses are <a href="https://exercism.io">Exercism</a> and <a href="https://kaido.org">Kaido</a>. Along the way I have also co-founded and exited <a href="https://meducation.net">Meducation</a> and <a href="https://rutherfordmedicine.com">Reachora</a>.</p>
-    <p>My core skillset involves strategy, leadership, community building, and software development. I have a degree in Artificial Intelligence and have co-developed <a href="https://patentscope2.wipo.int/search/en/detail.jsf?docId=WO2019122919&tab=PCTBIBLIO">a deep-learning algorithm used in Interventional Cardiology</a>.
-    <p>Away from work I read, travel, climb, and get nerdy about coffee.
+    <header>
+      <div class="container">
+        <div style="display:flex; align-items: center;">
+          <img src="./ihid.jpg" style="width:120px;height:120px;border-radius:100%;margin-right:20px;"/>
+          <div>
+            <h1>Jeremy Walker</h1>
+            <div class="bio">Entrepreneur, software developer and <br/>AI aficionado</div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-    <h2>Things that might interest you</h2>
-    <h3>Exercism</h3>
-    <p><a href="https://exercism.io">Exercism</a> is an education platform where you can improve your programming skills through practice and mentorship. Our code is <strong>open source</strong> and largely developed by our wonderful team of over <strong>3000 wonderful volunteer contributors</strong>. We are a <strong>not-for-profit organisation</strong> that places a strong focus on being inclusive and welcoming.</p>
-    <p>I regularly create videos that discuss our journey and provide insights in to the development of Exercism. You can watch them on <a href="https://www.youtube.com/channel/UCI539r_OxiqZpUUhmPXsrEA">Exercism's YouTube channel</a>.
+    <main>
+      <div class="container">
+        <h2>Hi there 👋</h2>
+        <p>I'm Jeremy, a social entrepeneur and software developer.</p>
+        <p>
+          For the last 20 years, I've built organisations that help others. I'm most well-known for being my success stories — <a href="#exercism">Exercism</a> and <a href="#kaido">Kaido</a>. 
+          I've run multiple software consultancies, most notably <a class="external" href="https://thalamus.ai/" target="_blank">Thalamus</a>, an AI Consultancy, where I created
+          a patented <a class="external" target="_blank" href="https://patents.google.com/patent/US11387001B2/en">error detection deep-learning algorithm</a> used in Interventional Cardiology.
+          I also co-founded two medical education businesses: Meducation and Wondr Medical.
+        </p>
+        <p>
+          My core skillset involves software development, AI, product design, strategy, leadership.
+        </p>
+        <p>I'm originally from the UK but am largely nomadic and love exploring new cultures. I'm a big reader, and absorb a mixture of any <span style="text-wrap:nowrap">non-fiction</span> that interests me, along with lots of fantasy and sci fi. I'm a big coffee geek, a yogi and climber. Over the last couple of years I've also got very into <a href="#photography">photography</a> and chess.
 
-    <h3>Kaido</h3>
-    <p><a href="https://kaido.org">Kaido</a> is an employee wellbeing startup. We help organisations take better care of their employees, and improve the culture and morale in their workplaces. We work with a diverse range of businesses from tiny startups to large multinationals such as HSBC and KPMG. Of particular personal pride is our work within the NHS helping frontline staff across the UK including internationally renowned hospitals such as Great Ormond Street Children's Hospital.</p>
-    <p>We help individuals explore how they can improve their physical health, mental health, sleep and nutrition, with a focus on sustainable and non-judgemental behaviour change. We have already seen some <a href="https://kaido.org/results">exciting early results</a> and have exciting plans for the future.</p>
-    <h2>Follow my progress</h2>
-    <ul>
-      <li><a href="https://github.com/iHiD">GitHub</a></li>
-      <li><a href="https://twitter.com/iHiD">Twitter</a></li>
-    </ul>
-    <p>If you want to get in touch with me, please <a href="mailto:jez.walker@gmail.com">send me an email</a>.
+        <p>
+          You can find me on <a class="external" target="_blank" href="https://www.linkedin.com/in/ihidjeremywalker/">LinkedIn</a>,
+          <a class="external" target="_blank" href="https://github.com/ihid">GitHub</a>,
+          <a class="external" target="_blank" href="https://twitter.com/ihid">Twitter</a> and
+          <a class="external" target="_blank" href="https://www.instagram.com/welltroddenlife/">Instagram</a>.
+        If you'd like to get in touch, the best way is <a href="mailto:jez.walker@gmail.com">by email</a>.</p>
+        <hr/>
+        <h2>A short biography</h2>
+        <p>
+          I started coding when aged 8 and started selling what I was making when aged 14. And I've followed that path since!
+           I have a degree in Artificial Intelligence (from before it was cool) from the <a class="external" target="_blank" href="https://www.birmingham.ac.uk/">University of Birmingham</a> and have spent 20 years building products and businesses, largely in education.
+        </p>
+        <p>Throughout my career I've worked on numerous products, most notably as the co-founder of <a href="#exercism">Exercism</a> and <a href="#kaido">Kaido</a>. I explain more about those below.</p>
+
+        <p>
+          Throughout my career, I've mentored many founders and served as a non-exec director at <a href="https://wedontsettle.com/" class="external">We Don't Settle</a> and <a href="https://beatfreeks.com/" class="external">Beatfreeks</a>.
+        </p>
+
+        <h3 id="exercism">Exercism</h3>
+        <p>I'm the <strong>co-founder and CEO</strong> of <a class="external" target="_blank" href="https://exercism.org">Exercism</a>, an education platform teaching programming langauges through hands-on problem solving and mentorship. We've grown to 1.8M users by word of mouth. Our code is open source and comprised of <a class="external" target="_blank" href="https://github.com/exercism">over 350 GitHub repositories</a>. We are a <strong>nonprofit organisation</strong> that places a strong focus on being inclusive and welcoming.</p>
+        <p>I regularly create videos that discuss our journey and provide insights in to the development of Exercism on <a class="external" target="_blank" href="https://www.youtube.com/channel/UCI539r_OxiqZpUUhmPXsrEA">Exercism's YouTube channel</a>.
+
+        <h3 id="kaido">Kaido</h3>
+        <p><a href="https://kaido.org">Kaido</a> is an team culture and employee wellbeing business. We help organisations take better care of their employees, and improve the culture and morale in their workplaces. We work with a diverse range of businesses from tiny startups to large multinationals such as HSBC and KPMG. Of particular personal pride is our work within the NHS helping frontline staff across the UK including internationally renowned hospitals such as Great Ormond Street Children's Hospital.</p>
+        <p>We help individuals explore how they can improve their physical health, mental health, sleep and nutrition, with a focus on sustainable and non-judgemental behaviour change. We have already seen some <a href="https://kaido.org/results">exciting early results</a> and have exciting plans for the future.</p>
+
+        <hr/>
+
+        <h2 id="photography">Photography</h2>
+        <p>You can see more of my photography on <a class="external" target="_blank" href="https://www.instagram.com/welltroddenlife/">Instagram</a>. Here are a few of my favourites.
+        <div class="photo-grid">
+          <a href="./photos/R0002297.jpg" target="_blank"><img src="./photos/R0002297.jpg"/></a>
+          <a href="./photos/DSCF4973.jpg" target="_blank"><img src="./photos/DSCF4973.jpg"/></a>
+          <a href="./photos/DSCF5313.jpg" target="_blank"><img src="./photos/DSCF5313.jpg"/></a>
+          <a href="./photos/R0001961.jpg" target="_blank"><img src="./photos/R0001961.jpg"/></a>
+          <a href="./photos/DSCF4931.jpg" target="_blank"><img src="./photos/DSCF4931.jpg"/></a>
+          <a href="./photos/R0002023.jpg" target="_blank"><img src="./photos/R0002023.jpg"/></a>
+          <a href="./photos/R0002063.jpg" target="_blank"><img src="./photos/R0002063.jpg"/></a>
+          <a href="./photos/DSCF5264.jpg" target="_blank"><img src="./photos/DSCF5264.jpg"/></a>
+        </div>
+        <hr/>
+
+        <h2 id="podcasts">Podcasts</h2>
+        <p style="margin-bottom:10px;">Here are a few fun podcast episodes I appeared on. If you'd like to feature me on a podcast, please <a href="mailto:jez.walker@gmail.com">get in touch</a>.</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6TsSIF7nY0NrazxnG8yP79?si=560408b3235a4905?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4z2dMRLPMRE1H7860NHCPI?si=46bfec0408724e0d?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4oFxS7eKE5nZjCdzFWjfXH?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0X5sfkF3psL6IX2wa7wnWv?si=9472b0e8155542bd?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <hr/>
+        <h2 style="margin-top:30px;" id="podcasts">Videos</h2>
+        <p style="margin-bottom:10px;">I reguarly release a mixture of technical content and interviews on <a class="external" target="_blank" href="https://youtube.com/exercismvideos">Exercism's YouTube Channel</a>. There are also numerous videos of me speaking at conferences online. Here is a varied selection.</p>
+
+        <div class="video-grid">
+          <div class="embed-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/vhaFgsfmH_s?si=Dsl7pmlHypn3PMVf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div class="embed-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/0FzItuT-Z18?si=Dsl7pmlHypn3PMVf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div class="embed-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/fBFsxmJEk7M?si=0FzItuT-Z18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div class="embed-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZM3-Gl5DVgM?si=wSotoRj9L6TjOyDj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div class="embed-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/biGAfK6OElE?si=bNEFidrunQO3PHak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div class="embed-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/v6fMaOdUxSk?si=bNEFidrunQO3PHak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+      var elem = document.querySelector('.photo-grid');
+      var msnry = new Masonry( elem, {
+        // options
+        itemSelector: '.photo-grid a',
+        percentPosition: true
+      });
+    </script>
   </body>
 </html>
