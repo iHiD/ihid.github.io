@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeremy Walker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #121212; color: #d9d6cf; font: 17px/1.65 "Work Sans", system-ui, sans-serif; }
+    a { color: #f2c14e; text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 40px; }
+    .serif { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; }
+
+    .hero { min-height: 92vh; display: flex; flex-direction: column; justify-content: space-between; padding: 40px 0 56px; }
+    .bar { display: flex; justify-content: space-between; align-items: center; font-size: 14px; letter-spacing: 0.02em; }
+    .bar img { width: 44px; height: 44px; border-radius: 50%; filter: grayscale(1); vertical-align: middle; margin-right: 12px; }
+    .bar nav { display: flex; gap: 22px; }
+    .bar nav a { color: #d9d6cf; }
+    h1 { font-size: clamp(64px, 12vw, 168px); line-height: 0.9; color: #f4f1ea; margin: 0; letter-spacing: -0.01em; }
+    .hero p { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.35; max-width: 820px; margin: 32px 0 0; color: #f4f1ea; }
+    .hero p i { color: #f2c14e; }
+
+    .chapter { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; padding: 96px 0; border-top: 1px solid #2c2c2c; }
+    .chapter .num { font-size: clamp(64px, 9vw, 120px); line-height: 0.95; color: #f2c14e; }
+    .chapter .num small { display: block; font-family: "Work Sans", sans-serif; font-size: 15px; color: #8d8a83; margin-top: 14px; line-height: 1.4; }
+    .chapter h2 { font-size: 40px; line-height: 1.1; color: #f4f1ea; margin: 0 0 20px; }
+    .chapter p { margin: 0 0 16px; }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 32px; margin-top: 28px; }
+    .facts div { border-top: 1px solid #3a3a3a; padding-top: 10px; font-size: 15px; }
+    .facts b { display: block; font-family: "DM Serif Display", serif; font-weight: 400; font-size: 30px; color: #f4f1ea; line-height: 1.1; }
+
+    .ventures { list-style: none; padding: 0; margin: 0; }
+    .ventures li { display: grid; grid-template-columns: 1fr auto; padding: 18px 0; border-top: 1px solid #2c2c2c; gap: 4px 24px; }
+    .ventures li:first-child { border-top: 0; padding-top: 0; }
+    .ventures .n { font-family: "DM Serif Display", serif; font-size: 26px; color: #f4f1ea; }
+    .ventures .d { color: #8d8a83; font-size: 14px; text-align: right; }
+    .ventures p { grid-column: 1 / -1; margin: 0; font-size: 15px; }
+
+    footer { border-top: 1px solid #2c2c2c; padding: 64px 0 80px; }
+    footer .serif { font-size: 40px; color: #f4f1ea; margin: 0 0 12px; }
+    @media (max-width: 760px) {
+      .wrap { padding: 0 20px; }
+      .bar nav { display: none; }
+      .chapter { grid-template-columns: 1fr; gap: 20px; padding: 64px 0; }
+      .facts { grid-template-columns: 1fr; }
+      .chapter h2 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="bar">
+      <span><img src="../ihid.jpg" alt="">Technologist and founder</span>
+      <nav><a href="#exercism">Exercism</a><a href="#ai">AI</a><a href="#ventures">Ventures</a><a href="mailto:jez.walker@gmail.com">Contact</a></nav>
+    </div>
+    <div>
+      <h1 class="serif">Jeremy<br>Walker</h1>
+      <p>I lead <i>Exercism</i>, the nonprofit that has taught 3.1 million people to code. Over twenty years, I have built companies in education, health and AI.</p>
+    </div>
+  </section>
+
+  <section class="chapter" id="exercism">
+    <div class="num serif">3.1M<small>students taught,<br>entirely by word of mouth</small></div>
+    <div>
+      <h2 class="serif">Building Exercism</h2>
+      <p>For nearly a decade I have led <a href="https://exercism.org">Exercism</a>, a nonprofit coding-education platform teaching 85 programming languages, entirely free. It is one of the world's largest open-source organisations by contributors, and we built it for under $500,000.</p>
+      <p>I set the strategy, raise the money, lead the community and write the code. I have led two full rewrites of the platform, and I built the agentic system that translates it into 19 languages.</p>
+      <div class="facts">
+        <div><b>559M+</b>minutes of free education delivered</div>
+        <div><b>£1.5M+</b>raised from donors including Google, Mozilla and the University of Chicago</div>
+        <div><b>20,000+</b>volunteer maintainers, contributors and mentors led</div>
+        <div><b>450+</b>repositories running 85 languages in production</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="ai">
+    <div class="num serif">3<small>countries granting my patent:<br>the US, Japan and South Korea</small></div>
+    <div>
+      <h2 class="serif">Applied AI, since before it was fashionable</h2>
+      <p>I graduated in Computer Science and Artificial Intelligence from the University of Birmingham in 2005.</p>
+      <p>In 2018 I partnered with some of the world's leading cardiologists to build a deep-learning system that detects errors in real time during interventional cardiology. I built the tool the doctors used to create its training data and developed the algorithm. It outperforms doctors at error detection and is <a href="https://patents.google.com/patent/US11387001B2/en">patented</a>.</p>
+      <p>I have secured and led two Innovate UK projects, one of which built real-time NLP and recommendation algorithms across thousands of pieces of medical content. Today I build agentic systems in production at Exercism and Jiki.</p>
+    </div>
+  </section>
+
+  <section class="chapter" id="ventures">
+    <div class="num serif">500k<small>employees reached<br>through Kaido</small></div>
+    <div>
+      <h2 class="serif">Ventures</h2>
+      <ul class="ventures">
+        <li><span class="n"><a href="https://jiki.io">Jiki</a></span><span class="d">Founder &amp; CEO · 2024–</span><p>A for-profit sister company to Exercism, teaching beginners to code in the LLM era.</p></li>
+        <li><span class="n"><a href="https://kaido.org">Kaido</a></span><span class="d">Co-founder &amp; CTO · 2017–</span><p>Employee wellbeing for 250+ customers including HSBC, Accenture, the BBC and the NHS. 96% of participants would recommend it.</p></li>
+        <li><span class="n"><a href="https://gikiactions.com">Giki Actions</a></span><span class="d">Co-founder · 2026–</span><p>Helping SMEs take climate action, with partners including the UK government and the UN.</p></li>
+        <li><span class="n"><a href="https://thalamus.ai/">Thalamus</a></span><span class="d">Owner · 2016–</span><p>My venture-building vehicle, incubating businesses with industry leaders.</p></li>
+        <li><span class="n">Meducation</span><span class="d">Co-founder, CTO then CEO · 2008–2016</span><p>An education network used by 200,000 medical students, 15% of the world's total.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p class="serif">Get in touch.</p>
+    <p><a href="mailto:jez.walker@gmail.com">jez.walker@gmail.com</a> · <a href="https://www.linkedin.com/in/ihidjeremywalker/">LinkedIn</a> · <a href="https://github.com/ihid">GitHub</a> · <a href="https://youtube.com/exercismvideos">YouTube</a></p>
+    <p style="color:#8d8a83;font-size:15px;max-width:640px;margin-top:28px">I was a Non-Executive Director of Beatfreeks from 2014 to 2019. I'm British, live nomadically and am learning Japanese, and I take <a href="https://www.instagram.com/welltroddenlife/">photographs</a> along the way.</p>
+  </footer>
+</div>
+</body>
+</html>

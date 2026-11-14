@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeremy Walker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: #222; font: 18px/1.7 "Source Serif 4", Charter, Georgia, serif; }
+    a { color: #222; text-decoration: underline; text-decoration-color: #b8b8b8; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-color: #222; }
+    .page { display: grid; grid-template-columns: 200px minmax(0, 620px); gap: 64px; max-width: 980px; margin: 0 auto; padding: 96px 32px 120px; }
+    aside { position: sticky; top: 96px; align-self: start; font-size: 15px; line-height: 1.9; }
+    aside img { width: 56px; height: 56px; border-radius: 50%; display: block; margin-bottom: 16px; }
+    aside .name { font-weight: 600; font-size: 16px; }
+    aside nav { margin-top: 18px; }
+    aside nav a { display: block; text-decoration: none; color: #777; }
+    aside nav a:hover { color: #222; }
+    h2 { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: #999; margin: 56px 0 14px; font-variant: small-caps; font-size: 17px; letter-spacing: 0.06em; }
+    main > p:first-child { margin-top: 0; }
+    .lead { font-size: 23px; line-height: 1.5; }
+    p { margin: 0 0 18px; }
+    ul { padding-left: 1.1em; margin: 0 0 18px; }
+    li { margin-bottom: 8px; }
+    .meta { color: #888; }
+    .todo { background: #fff3c4; padding: 0 4px; }
+    footer { margin-top: 64px; color: #888; font-size: 15px; }
+    @media (max-width: 760px) {
+      .page { grid-template-columns: 1fr; gap: 24px; padding-top: 48px; padding-left: 20px; padding-right: 20px; }
+      aside { position: static; }
+      aside nav { display: flex; flex-wrap: wrap; gap: 0 16px; }
+      .lead { font-size: 21px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside>
+    <img src="../ihid.jpg" alt="Jeremy Walker">
+    <div class="name">Jeremy Walker</div>
+    <nav>
+      <a href="#exercism">Exercism</a>
+      <a href="#ai">AI</a>
+      <a href="#ventures">Ventures</a>
+      <a href="#elsewhere">Elsewhere</a>
+      <a href="mailto:jez.walker@gmail.com">Email</a>
+    </nav>
+  </aside>
+
+  <main>
+    <p class="lead">I'm a technologist and founder. I lead <a href="https://exercism.org">Exercism</a>, a nonprofit that has taught 3.1 million people to code, and I have spent twenty years building organisations at the intersection of technology, product and business.</p>
+    <p>I studied Computer Science and Artificial Intelligence at the University of Birmingham, and I hold a <a href="https://patents.google.com/patent/US11387001B2/en">patent</a> for a deep-learning algorithm that detects errors during interventional cardiology. I co-founded <a href="https://kaido.org">Kaido</a>, which reached 500,000 employees at companies including HSBC, Accenture and the NHS, and I recently founded <a href="https://jiki.io">Jiki</a> to teach complete beginners to code in the age of LLMs.</p>
+
+    <h2 id="exercism">Exercism</h2>
+    <p>I have been CEO of Exercism since 2017. It teaches 85 programming languages, entirely free, and has grown to over 3 million students by word of mouth alone. We have delivered more than 559 million minutes of free education, and we built the whole thing for under $500,000.</p>
+    <ul>
+      <li>I set the strategy and raised £1.5M+ in donations from thousands of individuals and from organisations including Google, Mozilla and the University of Chicago.</li>
+      <li>I recruited and led 150 volunteer maintainers, many giving 10+ hours a week for years, alongside a small full-time staff, 5,500 code contributors and 19,000+ mentors. We are one of the world's largest open-source organisations by contributors.</li>
+      <li>I code hands-on. We run 85 languages in production across 450+ repositories, all deploying automatically, and I have led two full rewrites of the platform.</li>
+      <li>I built an agentic system that translates the site into 19 languages, working directly with native speakers and updating in real time from their feedback.</li>
+    </ul>
+
+    <h2 id="ai">AI</h2>
+    <p>In 2018 I partnered with some of the world's leading cardiologists to build an AI system that detects errors in real time during interventional cardiology. I built the tool the doctors used to create training data and developed the deep-learning algorithm. It outperforms doctors at error detection and is now patented in the US, Japan and South Korea.</p>
+    <p>I have secured and led two Innovate UK projects. The first built real-time NLP and recommendation algorithms across thousands of pieces of medical content, and the second funded the cardiology work. More recently I have built agentic systems in production at Exercism and Jiki.</p>
+
+    <h2 id="ventures">Ventures</h2>
+    <p>I build companies through <a href="https://thalamus.ai/">Thalamus</a>, my venture-building vehicle.</p>
+    <ul>
+      <li><a href="https://jiki.io">Jiki</a>, Founder &amp; CEO, 2024–present. A for-profit sister company to Exercism, teaching coding to beginners in the LLM era.</li>
+      <li><a href="https://gikiactions.com">Giki Actions</a>, Co-founder, 2026–present. A platform helping SMEs take climate action, with partners including the UK government and the UN.</li>
+      <li><a href="https://kaido.org">Kaido</a>, Co-founder &amp; CTO, 2017–present. Employee wellbeing for 250+ paying customers, with 96% of participants recommending it. We raised a £400k seed round.</li>
+      <li>Meducation, Co-founder, CTO then CEO, 2008–2016. An education network used by 200,000 medical students, 15% of the world's total, with clients including Elsevier and Oxford University Press.</li>
+    </ul>
+
+    <h2 id="elsewhere">Elsewhere</h2>
+    <p>I served as a Non-Executive Director of Beatfreeks from 2014 to 2019. I have written open-source libraries such as <a href="https://rubygems.org/gems/propono">Propono</a> and <a href="https://rubygems.org/gems/mandate">Mandate</a>, spoken at international conferences, and appeared on podcasts. I publish technical videos and interviews on <a href="https://youtube.com/exercismvideos">Exercism's YouTube channel</a>.</p>
+    <p>I'm British and live nomadically. I'm learning Japanese, I'm in the top 1% of players on chess.com, and I take <a href="https://www.instagram.com/welltroddenlife/">photographs</a>.</p>
+
+    <footer>
+      <a href="mailto:jez.walker@gmail.com">jez.walker@gmail.com</a> · <a href="https://www.linkedin.com/in/ihidjeremywalker/">LinkedIn</a> · <a href="https://github.com/ihid">GitHub</a>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

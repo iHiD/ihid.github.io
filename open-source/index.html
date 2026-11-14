@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Open source · Jeremy Walker</title>
+  <meta name="description" content="I'm one of the world's most prolific open source developers, with over 50,000 contributions on GitHub over the last 15 years.">
+  <link rel="canonical" href="https://ihid.info/open-source/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jeremy Walker">
+  <meta property="og:title" content="Open source · Jeremy Walker">
+  <meta property="og:description" content="I'm one of the world's most prolific open source developers, with over 50,000 contributions on GitHub over the last 15 years.">
+  <meta property="og:url" content="https://ihid.info/open-source/">
+  <meta property="og:image" content="https://ihid.info/ihid.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html { overflow-y: scroll; scrollbar-gutter: stable; }
+    :root {
+      --ink: #1a1917;
+      --body: #2e2c28;
+      --muted: #6b665c;
+      --line: #ddd6c8;
+      --accent: #b0432a;
+      --link: #0a5e4e;
+      --bg: #f7f4ee;
+      --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+      --sans: "IBM Plex Sans", system-ui, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --ink: #f2eee6;
+        --body: #d6d1c7;
+        --muted: #a39d91;
+        --line: #3b3731;
+        --accent: #e0765a;
+        --link: #6cc9b0;
+        --bg: #1c1b19;
+      }
+    }
+    :root[data-theme="dark"] {
+      --ink: #f2eee6;
+      --body: #d6d1c7;
+      --muted: #a39d91;
+      --line: #3b3731;
+      --accent: #e0765a;
+      --link: #6cc9b0;
+      --bg: #1c1b19;
+    }
+    :root { color-scheme: light; }
+    :root[data-theme="dark"] { color-scheme: dark; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { color-scheme: dark; } }
+    body { margin: 0; background: var(--bg); color: var(--body); font: 17px/1.65 var(--sans); }
+    a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+    .page { max-width: 955px; margin: 0 auto; padding: 96px 32px; display: grid; grid-template-columns: 210px 1fr; gap: 72px; }
+
+    aside { font: 14px/1.9 var(--mono); }
+    aside img { width: 64px; height: 64px; border-radius: 6px; display: block; margin-bottom: 18px; }
+    aside .name { font-weight: 600; color: var(--ink); font-size: 15px; }
+    aside .role { color: var(--muted); margin-bottom: 28px; }
+    aside nav { border-left: 1px solid var(--line); }
+    aside nav a { display: block; color: var(--muted); text-decoration: none; padding: 1px 0 1px 14px; margin-left: -1px; border-left: 2px solid transparent; }
+    aside nav a:hover { color: var(--ink); }
+    aside nav a.on { color: var(--ink); font-weight: 600; border-left-color: var(--accent); }
+    aside nav .sub a { padding-left: 30px; font-size: 13px; }
+    aside nav a.parent { color: var(--ink); }
+    h2 + .facts { margin-top: -4px; }
+    h3 { font: 600 17px/1.4 var(--mono); color: var(--ink); margin: 40px 0 12px; }
+    .videos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 8px 0 0; }
+    .videos img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 6px; }
+    .videos a { position: relative; display: block; }
+    .videos a::before { content: ""; position: absolute; top: 50%; left: 50%; width: 60px; height: 60px; margin: -30px 0 0 -30px; border-radius: 50%; background: rgba(0, 0, 0, 0.6); transition: background 0.15s, transform 0.15s; }
+    .videos a::after { content: ""; position: absolute; top: 50%; left: 50%; margin: -11px 0 0 -6px; border-style: solid; border-width: 11px 0 11px 18px; border-color: transparent transparent transparent #fff; }
+    .videos a:hover::before { background: rgba(0, 0, 0, 0.8); transform: scale(1.08); }
+    .contributions { display: block; margin: 8px 0 0; padding: 16px; background: #fff; border: 1px solid #d0d7de; border-radius: 6px; }
+    .contributions { text-decoration: none; }
+    .contributions .title { display: block; font: 600 13px/1.4 var(--mono); color: #1f2328; margin: 0 0 12px; text-align: center; }
+    .contributions img { display: block; width: 100%; height: auto; }
+    .photos { columns: 3; column-gap: 12px; margin: 8px 0 0; }
+    .photos a { display: block; margin: 0 0 12px; break-inside: avoid; }
+    .photos img { display: block; width: 100%; height: auto; border-radius: 6px; }
+    @media (max-width: 600px) { .photos { columns: 2; } }
+    .pods { display: grid; gap: 10px; }
+    .pods iframe { width: 100%; border: 0; border-radius: 12px; display: block; }
+    .meta { font: 13px/1.6 var(--mono); color: var(--muted); margin: -12px 0 20px; }
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 16px 0; margin: 0 0 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .facts b { display: block; font: 600 24px/1.2 var(--mono); color: var(--ink); }
+    .facts span { display: block; font: 13px/1.45 var(--mono); color: var(--muted); margin-top: 4px; }
+    aside .contact { margin-top: 28px; }
+    aside .contact a { color: var(--muted); display: block; text-decoration: none; }
+    aside .contact a:hover { color: var(--ink); }
+    .theme-toggle { position: relative; display: flex; align-items: center; gap: 4px; margin-top: 20px; padding: 3px; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 999px; cursor: pointer; }
+    .theme-toggle::before { content: ""; position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%; background: var(--line); transition: transform 0.2s; }
+    .theme-toggle svg { position: relative; display: block; width: 26px; height: 26px; padding: 5px; }
+    .theme-toggle .sun { color: var(--ink); }
+    .theme-toggle:hover { border-color: color-mix(in srgb, var(--line), var(--muted) 35%); }
+    :root[data-theme="dark"] .theme-toggle::before { transform: translateX(30px); }
+    :root[data-theme="dark"] .theme-toggle .sun { color: var(--muted); }
+    :root[data-theme="dark"] .theme-toggle .moon { color: var(--ink); }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .theme-toggle::before { transform: translateX(30px); }
+      :root:not([data-theme="light"]) .theme-toggle .sun { color: var(--muted); }
+      :root:not([data-theme="light"]) .theme-toggle .moon { color: var(--ink); }
+    }
+    .menu-toggle { display: none; }
+
+    main { max-width: 610px; }
+    .panel + .panel { margin-top: 64px; }
+    h2 { font: 600 22px/1.3 var(--mono); color: var(--ink); margin: 0 0 22px; }
+    p { margin: 0 0 18px; }
+    .intro .lead { font: 600 24px/1.4 var(--mono); color: var(--ink); margin: 0 0 28px; }
+    .muted { color: var(--muted); }
+    strong { color: var(--ink); font-weight: 500; }
+    ul { list-style: none; padding: 0; margin: 0 0 18px; }
+    li { position: relative; padding-left: 22px; margin-bottom: 14px; }
+    li::before { content: "–"; position: absolute; left: 0; color: var(--accent); font-family: var(--mono); }
+    .entry { padding: 18px 0; border-top: 1px solid var(--line); }
+    .entry:last-child { border-bottom: 1px solid var(--line); }
+    .entry b { display: block; font: 600 17px/1.4 var(--mono); }
+    .entry b a { color: var(--ink); }
+    .entry p { margin: 0 0 14px; }
+    .entry ul { margin: 0; }
+    .entry li:last-child { margin-bottom: 0; }
+    .entry .muted { display: block; font: 13px/1.6 var(--mono); margin: 2px 0 6px; }
+
+    @media (max-width: 720px) {
+      .page { grid-template-columns: 1fr; gap: 36px; padding: 24px 20px 64px; }
+      aside { position: relative; }
+      aside .role { margin-bottom: 0; }
+      aside .menu { margin-top: 24px; }
+      aside .contact { display: flex; gap: 18px; margin-top: 20px; }
+      .theme-toggle { margin-top: 16px; }
+      .has-js .menu-toggle { display: block; position: absolute; top: 0; right: 0; width: 44px; height: 44px; padding: 0; background: none; border: 1px solid var(--line); border-radius: 6px; cursor: pointer; }
+      .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after { display: block; position: absolute; left: 12px; width: 18px; height: 2px; background: var(--ink); border-radius: 1px; content: ""; }
+      .menu-toggle span { top: 20px; }
+      .menu-toggle span::before { top: -6px; left: 0; }
+      .menu-toggle span::after { top: 6px; left: 0; }
+      .has-js aside:not(.open) .menu { display: none; }
+      .intro .lead { font-size: 21px; }
+    }
+  </style>
+  <script>(function () { var r = document.documentElement; r.classList.add("has-js"); try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") r.setAttribute("data-theme", t); } catch (e) {} })();</script>
+</head>
+<body>
+<div class="page">
+  <aside>
+    <img src="../ihid.jpg" alt="Jeremy Walker">
+    <div class="name">Jeremy Walker</div>
+    <div class="role">Technologist &amp; founder</div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span></button>
+    <div class="menu" id="site-menu">
+    <nav>
+      <a href="../">About</a>
+      <a href="../ai/">Artificial Intelligence</a>
+      <a href="../ventures/">Ventures</a>
+      <div class="sub">
+        <a href="../ventures/exercism/">Exercism</a>
+        <a href="../ventures/jiki/">Jiki</a>
+        <a href="../ventures/kaido/">Kaido</a>
+        <a href="../ventures/meducation/">Meducation</a>
+      </div>
+      <a href="../open-source/" class="on" aria-current="page">Open source</a>
+      <a href="../speaking/">Speaking</a>
+      <a href="../personal/">Personal</a>
+    </nav>
+    <div class="contact">
+      <a href="mailto:jez.walker@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/ihidjeremywalker/">LinkedIn</a>
+      <a href="https://github.com/ihid">GitHub</a>
+    </div>
+    <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    </div>
+  </aside>
+
+  <main>
+    <section class="panel on" id="oss">
+      <h2>Open source</h2>
+      <div class="facts">
+        <div><b>50,000+</b><span>GitHub contributions</span></div>
+        <div><b>Top 40</b><span>most active GitHub users in the UK</span></div>
+        <div><b>1.4M+</b><span>downloads of my libraries</span></div>
+      </div>
+      <p>I'm one of the world's most prolific open source developers, with over 50,000 contributions on GitHub over the last 15 years.</p>
+      <p>For the last decade, I've led <a href="https://github.com/exercism">Exercism</a>, an open source organisation with <strong>440+ public repositories</strong> and <strong>5,500+ contributors</strong>.</p>
+      <p>I've also built and maintain a wide variety of open source libraries, such as <a href="https://rubygems.org/gems/propono">Propono</a> and <a href="https://rubygems.org/gems/mandate">Mandate</a>, which have been downloaded <strong>1.4M+ times</strong>.</p>
+      <p>You can explore my contributions on <a href="https://github.com/ihid">my GitHub</a>.</p>
+      <a class="contributions" href="https://github.com/ihid"><span class="title">My last 12 months on GitHub</span><img src="../github-contributions.webp" width="1438" height="209" alt="My GitHub contribution graph for the last year, showing 12,401 contributions" loading="lazy"></a>
+    </section>
+  </main>
+</div>
+<script id="site">
+  (function () {
+    var root = document.documentElement;
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    var themeButton = document.querySelector(".theme-toggle");
+    function current() { return root.getAttribute("data-theme") || (mq.matches ? "dark" : "light"); }
+    function label() {
+      var next = current() === "dark" ? "light" : "dark";
+      themeButton.setAttribute("aria-checked", next === "light" ? "true" : "false");
+    }
+    themeButton.addEventListener("click", function () {
+      var next = current() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      label();
+    });
+    if (mq.addEventListener) mq.addEventListener("change", label);
+    label();
+
+    var aside = document.querySelector("aside");
+    var menuButton = document.querySelector(".menu-toggle");
+    menuButton.addEventListener("click", function () {
+      var open = aside.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  })();
+</script>
+</body>
+</html>

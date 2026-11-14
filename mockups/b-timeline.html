@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeremy Walker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: #1d1d1f; font: 16px/1.6 "IBM Plex Sans", system-ui, sans-serif; }
+    a { color: #0b57d0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 72px 24px 96px; }
+    header { display: flex; align-items: center; justify-content: center; gap: 24px; padding-bottom: 40px; border-bottom: 1px solid #e5e5e5; }
+    header img { width: 120px; height: 120px; border-radius: 50%; }
+    h1 { font-size: 30px; font-weight: 600; margin: 0; }
+    .sub { color: #555; margin: 2px 0 10px; }
+    .icons { display: flex; gap: 14px; font-size: 14px; }
+
+    .tl { list-style: none; margin: 40px 0 0; padding: 0; position: relative; }
+    .tl::before { content: ""; position: absolute; left: 131px; top: 8px; bottom: 8px; width: 1px; background: #e5e5e5; }
+    .tl li { display: grid; grid-template-columns: 96px 72px 1fr; gap: 0; padding: 0 0 36px; align-items: start; }
+    .when { font: 13px/1.4 "IBM Plex Mono", monospace; color: #888; padding-top: 14px; text-align: right; padding-right: 18px; }
+    .logo { width: 72px; display: flex; justify-content: center; }
+    .logo span { width: 48px; height: 48px; border-radius: 10px; background: #fff; border: 1px solid #e5e5e5; display: grid; place-items: center; overflow: hidden; position: relative; z-index: 1; }
+    .logo img { width: 30px; height: 30px; }
+    .logo b { font-size: 20px; color: #444; }
+    .body { padding-left: 10px; }
+    .body h3 { margin: 0; font-size: 18px; font-weight: 600; }
+    .body .role { color: #666; font-size: 15px; margin-bottom: 6px; }
+    .body p { margin: 0 0 8px; }
+    .body ul { margin: 6px 0 0; padding-left: 18px; }
+    .body li { display: list-item; padding: 0; margin-bottom: 4px; }
+
+    h2 { font-size: 22px; font-weight: 600; margin: 24px 0 12px; padding-top: 32px; border-top: 1px solid #e5e5e5; }
+    .bio { color: #444; }
+    .media { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .media img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 6px; display: block; }
+    @media (max-width: 640px) {
+      header { flex-direction: column; text-align: center; }
+      .icons { justify-content: center; }
+      .tl::before { display: none; }
+      .tl li { grid-template-columns: 56px 1fr; }
+      .when { grid-column: 1 / -1; text-align: left; padding: 0 0 6px; }
+      .logo { width: 56px; justify-content: flex-start; }
+      .body { padding-left: 4px; }
+      .media { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="../ihid.jpg" alt="Jeremy Walker">
+    <div>
+      <h1>Jeremy Walker</h1>
+      <div class="sub">Technologist and founder. CEO of Exercism.</div>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/ihidjeremywalker/">LinkedIn</a>
+        <a href="https://github.com/ihid">GitHub</a>
+        <a href="https://youtube.com/exercismvideos">YouTube</a>
+        <a href="mailto:jez.walker@gmail.com">Email</a>
+      </div>
+    </div>
+  </header>
+
+  <ul class="tl">
+    <li>
+      <div class="when">2024 – now</div>
+      <div class="logo"><span><img src="https://www.google.com/s2/favicons?domain=jiki.io&sz=64" alt=""></span></div>
+      <div class="body"><h3><a href="https://jiki.io">Jiki</a></h3><div class="role">Founder &amp; CEO</div>
+        <p>A for-profit sister company to Exercism, teaching coding to complete beginners in the LLM era. An AI-first approach let us build technology that would previously have taken years, including custom interpreters for JavaScript and Python.</p></div>
+    </li>
+    <li>
+      <div class="when">2017 – now</div>
+      <div class="logo"><span><img src="https://www.google.com/s2/favicons?domain=exercism.org&sz=64" alt=""></span></div>
+      <div class="body"><h3><a href="https://exercism.org">Exercism</a></h3><div class="role">Co-founder &amp; CEO</div>
+        <p>A nonprofit teaching 85 programming languages, entirely free. We have grown to 3.1M+ students by word of mouth and delivered 559M+ minutes of free education.</p>
+        <ul>
+          <li>Raised £1.5M+ in donations from thousands of individuals and from Google, Mozilla and the University of Chicago.</li>
+          <li>Recruited and led 150 volunteer maintainers, 5,500 code contributors and 19,000+ mentors.</li>
+          <li>Coded hands-on across 450+ repositories and led two full platform rewrites.</li>
+          <li>Built an agentic system that translates the site into 19 languages with native speakers.</li>
+        </ul></div>
+    </li>
+    <li>
+      <div class="when">2017 – now</div>
+      <div class="logo"><span><img src="https://www.google.com/s2/favicons?domain=kaido.org&sz=64" alt=""></span></div>
+      <div class="body"><h3><a href="https://kaido.org">Kaido</a></h3><div class="role">Co-founder &amp; CTO</div>
+        <p>An employee wellbeing platform with 250+ paying customers, including HSBC, Accenture, the BBC and the NHS. 500,000+ employees took part and 96% would recommend it. I led the platform and native apps and helped raise our £400k seed round.</p></div>
+    </li>
+    <li>
+      <div class="when">2018</div>
+      <div class="logo"><span><b>℞</b></span></div>
+      <div class="body"><h3><a href="https://patents.google.com/patent/US11387001B2/en">AI error detection in cardiology</a></h3><div class="role">Inventor · Patented in the US, Japan and South Korea</div>
+        <p>With some of the world's leading cardiologists, I built a deep-learning system that detects errors in real time during interventional cardiology, and the tool the doctors used to create its training data. It outperforms doctors at error detection. Funded by an Innovate UK grant.</p></div>
+    </li>
+    <li>
+      <div class="when">2016 – now</div>
+      <div class="logo"><span><img src="https://www.google.com/s2/favicons?domain=thalamus.ai&sz=64" alt=""></span></div>
+      <div class="body"><h3><a href="https://thalamus.ai/">Thalamus</a></h3><div class="role">Owner</div>
+        <p>My venture-building vehicle, where I incubate businesses with industry leaders. Its latest joint venture, <a href="https://gikiactions.com">Giki Actions</a>, helps SMEs take climate action with partners including the UK government and the UN.</p></div>
+    </li>
+    <li>
+      <div class="when">2008 – 2016</div>
+      <div class="logo"><span><b>M</b></span></div>
+      <div class="body"><h3>Meducation</h3><div class="role">Co-founder, CTO then CEO</div>
+        <p>An education network used by 200,000+ medical students, 15% of the world's total. Clients included Elsevier and Oxford University Press. I led an Innovate UK project building real-time NLP and recommendation algorithms.</p></div>
+    </li>
+    <li>
+      <div class="when">2005</div>
+      <div class="logo"><span><img src="https://www.google.com/s2/favicons?domain=birmingham.ac.uk&sz=64" alt=""></span></div>
+      <div class="body"><h3>University of Birmingham</h3><div class="role">BSc Computer Science &amp; Artificial Intelligence</div>
+        <p>I also captained the university's Ultimate Frisbee team.</p></div>
+    </li>
+  </ul>
+
+  <h2>Talks and videos</h2>
+  <div class="media">
+    <a href="https://www.youtube.com/watch?v=vhaFgsfmH_s"><img src="https://img.youtube.com/vi/vhaFgsfmH_s/hqdefault.jpg" alt=""></a>
+    <a href="https://www.youtube.com/watch?v=0FzItuT-Z18"><img src="https://img.youtube.com/vi/0FzItuT-Z18/hqdefault.jpg" alt=""></a>
+    <a href="https://www.youtube.com/watch?v=fBFsxmJEk7M&amp;t=243"><img src="https://img.youtube.com/vi/fBFsxmJEk7M/hqdefault.jpg" alt=""></a>
+  </div>
+
+  <h2>Bio</h2>
+  <p class="bio">Jeremy Walker is a technologist and founder. He is the CEO of Exercism, a nonprofit that has taught over 3 million people to code, and the founder of Jiki. He co-founded the employee wellbeing company Kaido and holds a patent for an AI algorithm that detects errors during interventional cardiology. He served as a Non-Executive Director of Beatfreeks from 2014 to 2019 and holds a degree in Computer Science and Artificial Intelligence from the University of Birmingham.</p>
+</div>
+</body>
+</html>

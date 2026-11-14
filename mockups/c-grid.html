@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeremy Walker</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: #111; font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    a { color: #111; text-decoration: none; border-bottom: 1px solid #ccc; }
+    a:hover { border-color: #111; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 56px 40px 96px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 24px; }
+    .top { align-items: start; }
+    .dot { width: 14px; height: 14px; border-radius: 50%; background: #e8380d; grid-column: 1 / span 12; margin-bottom: 56px; }
+    .name { grid-column: 1 / span 3; font-weight: 700; font-size: 14px; }
+    .nav { grid-column: 4 / span 3; color: #888; line-height: 1.7; }
+    .nav a { border: 0; color: #888; display: block; }
+    .nav a:hover { color: #111; }
+    .photo { grid-column: 11 / span 2; }
+    .photo img { width: 100%; max-width: 140px; aspect-ratio: 1; object-fit: cover; filter: grayscale(1) contrast(1.05); display: block; margin-left: auto; }
+
+    .statement { grid-column: 1 / span 9; font-size: 44px; line-height: 1.12; font-weight: 500; letter-spacing: -0.02em; margin: 72px 0 96px; }
+    .statement em { font-style: normal; color: #e8380d; }
+
+    .figures { border-top: 2px solid #111; padding-top: 16px; margin-bottom: 96px; }
+    .fig { grid-column: span 2; }
+    .fig b { display: block; font-size: 32px; font-weight: 500; letter-spacing: -0.02em; }
+    .fig span { color: #666; font-size: 13px; }
+
+    .col { grid-column: span 4; border-top: 1px solid #111; padding-top: 12px; }
+    .col h2 { font-size: 14px; font-weight: 700; margin: 0 0 28px; }
+    .item { margin-bottom: 26px; }
+    .item h3 { font-size: 14px; font-weight: 700; margin: 0; }
+    .item .r { color: #888; margin-bottom: 4px; }
+    .item p { margin: 0; }
+    footer { margin-top: 80px; padding-top: 12px; border-top: 1px solid #111; display: flex; gap: 24px; color: #888; }
+    @media (max-width: 900px) {
+      .statement { grid-column: 1 / -1; font-size: 32px; margin: 48px 0 56px; }
+      .fig { grid-column: span 4; margin-bottom: 16px; }
+      .col { grid-column: 1 / -1; margin-bottom: 32px; }
+      .name { grid-column: 1 / span 6; }
+      .nav { grid-column: 7 / span 6; }
+      .photo { display: none; }
+    }
+    @media (max-width: 520px) {
+      .wrap { padding: 32px 16px 64px; }
+      .fig { grid-column: span 6; }
+      .statement { font-size: 27px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="grid top">
+    <div class="dot"></div>
+    <div class="name">Jeremy Walker</div>
+    <div class="nav">
+      <a href="#work">Work</a>
+      <a href="#ai">AI</a>
+      <a href="#elsewhere">Elsewhere</a>
+      <a href="mailto:jez.walker@gmail.com">Email</a>
+    </div>
+    <div class="photo"><img src="../ihid.jpg" alt="Jeremy Walker"></div>
+
+    <p class="statement">I build technology organisations that help people. As CEO of <em>Exercism</em>, I've grown a nonprofit to 3.1 million students, entirely by word of mouth.</p>
+  </div>
+
+  <div class="grid figures">
+    <div class="fig"><b>3.1M</b><span>Exercism students</span></div>
+    <div class="fig"><b>559M</b><span>minutes of free education</span></div>
+    <div class="fig"><b>£1.5M</b><span>raised in donations</span></div>
+    <div class="fig"><b>20k+</b><span>volunteers led</span></div>
+    <div class="fig"><b>500k</b><span>employees reached by Kaido</span></div>
+    <div class="fig"><b>3</b><span>countries granting my AI patent</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="col" id="work">
+      <h2>Organisations</h2>
+      <div class="item"><h3><a href="https://exercism.org">Exercism</a></h3><div class="r">Co-founder &amp; CEO, 2017–</div>
+        <p>A nonprofit teaching 85 programming languages for free. I set the strategy, raised £1.5M+ from donors including Google and Mozilla, and lead 150 volunteer maintainers, 5,500 contributors and 19,000+ mentors.</p></div>
+      <div class="item"><h3><a href="https://jiki.io">Jiki</a></h3><div class="r">Founder &amp; CEO, 2024–</div>
+        <p>A for-profit sister company to Exercism, teaching complete beginners to code in the LLM era.</p></div>
+      <div class="item"><h3><a href="https://kaido.org">Kaido</a></h3><div class="r">Co-founder &amp; CTO, 2017–</div>
+        <p>Employee wellbeing for 250+ customers including HSBC, Accenture, the BBC and the NHS. 96% of participants would recommend it.</p></div>
+      <div class="item"><h3><a href="https://gikiactions.com">Giki Actions</a></h3><div class="r">Co-founder, 2026–</div>
+        <p>Helping SMEs take climate action, with the UK government and the UN.</p></div>
+      <div class="item"><h3>Meducation</h3><div class="r">Co-founder, CTO then CEO, 2008–2016</div>
+        <p>Used by 200,000 medical students, 15% of the world's total.</p></div>
+    </div>
+
+    <div class="col" id="ai">
+      <h2>Artificial intelligence</h2>
+      <div class="item"><h3><a href="https://patents.google.com/patent/US11387001B2/en">Patent US11387001B2</a></h3><div class="r">Inventor, 2018</div>
+        <p>A deep-learning algorithm that detects errors in real time during interventional cardiology, built with some of the world's leading cardiologists. It outperforms doctors at error detection and is granted in the US, Japan and South Korea.</p></div>
+      <div class="item"><h3>Innovate UK</h3><div class="r">Two government-backed projects</div>
+        <p>Real-time NLP and recommendation across thousands of pieces of medical content, and the cardiology research.</p></div>
+      <div class="item"><h3>Agentic systems</h3><div class="r">Exercism and Jiki</div>
+        <p>An agentic system that translates Exercism into 19 languages with native speakers, and an AI-first build of Jiki.</p></div>
+      <div class="item"><h3>University of Birmingham</h3><div class="r">BSc Computer Science &amp; AI, 2005</div></div>
+    </div>
+
+    <div class="col" id="elsewhere">
+      <h2>Elsewhere</h2>
+      <div class="item"><h3>Beatfreeks</h3><div class="r">Non-Executive Director, 2014–2019</div></div>
+      <div class="item"><h3>Open source</h3><div class="r">450+ repositories</div>
+        <p><a href="https://rubygems.org/gems/propono">Propono</a>, <a href="https://rubygems.org/gems/mandate">Mandate</a> and the whole of <a href="https://github.com/exercism">Exercism</a>.</p></div>
+      <div class="item"><h3>Speaking</h3><div class="r">Conferences, podcasts and video</div>
+        <p>Talks at international conferences, and technical videos on <a href="https://youtube.com/exercismvideos">YouTube</a>.</p></div>
+      <div class="item"><h3>Otherwise</h3><div class="r">Nomadic, from the UK</div>
+        <p>I am learning Japanese, I am in the top 1% on chess.com, and I take <a href="https://www.instagram.com/welltroddenlife/">photographs</a>.</p></div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="mailto:jez.walker@gmail.com">jez.walker@gmail.com</a>
+    <a href="https://www.linkedin.com/in/ihidjeremywalker/">LinkedIn</a>
+    <a href="https://github.com/ihid">GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
